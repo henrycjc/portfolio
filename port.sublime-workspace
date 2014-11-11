@@ -1,0 +1,413 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"STDIN",
+				"STDIN_FILENO"
+			],
+			[
+				"running",
+				"runningProcs"
+			],
+			[
+				"BAD_",
+				"BAD_PIPE"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"H",
+				"Head"
+			],
+			[
+				"A",
+				"A"
+			],
+			[
+				"part",
+				"partAok"
+			],
+			[
+				"fon",
+				"font-family"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/C.sublime-build",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"Package Control: Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Henry/Desktop/OLD/sorttest/scull.h",
+		"/C/Users/Henry/Desktop/OLD/sorttest/tests.h",
+		"/C/Users/Henry/Desktop/OLD/sorttest/sorttest.c",
+		"/C/Users/Henry/Desktop/OLD/test9.c",
+		"/C/Users/Henry/Desktop/scullsort-master/sort.c",
+		"/C/Users/Henry/Desktop/sculldiff/sorttest/sorttest.c",
+		"/C/Users/Henry/Desktop/sculldiff/sorttest/tests.h",
+		"/C/Users/Henry/Desktop/OLD/test10.c",
+		"/H/Users/Henry/Documents/Tinker.txt",
+		"/H/Users/Henry/Downloads/peter.c",
+		"/H/Users/Henry/Downloads/prac-fops.c",
+		"/C/Users/Henry/Desktop/sculldiff/scullsort/scull_load",
+		"/C/Users/Henry/Desktop/sculldiff/scullsort/scull_unload",
+		"/C/Users/Henry/Desktop/scullsort-master/main.c",
+		"/H/Users/Henry/Downloads/hub (1).c",
+		"/H/deco2800-2014/build.properties",
+		"/H/deco2800-2014/build.gradle",
+		"/C/Users/Henry/Desktop/nicoplayer.c",
+		"/C/mcserver/server.properties",
+		"/H/Games/Steam/SteamLibrary/SteamApps/common/Knights of the Old Republic II/swkotor2.ini",
+		"/H/Users/Henry/Downloads/hub.c",
+		"/H/Users/Henry/Downloads/player.c",
+		"/H/Developer/java/asssignment3/src/csse2002/security/SpyView.java",
+		"/C/Users/Henry/Desktop/nicohub.c",
+		"/H/Developer/java/asssignment3/src/csse2002/security/SpyController.java",
+		"/H/Developer/java/asssignment3/src/csse2002/security/SpyModel.java",
+		"/H/Developer/java/asssignment3/src/csse2002/security/SpySimulator.java",
+		"/H/Developer/csse2002/security/SpyModel.java",
+		"/H/Developer/csse2002/security/SpyController.java",
+		"/H/Developer/csse2002/security/InformantsReader.java",
+		"/H/install.ini",
+		"/H/deco2800-2014/settings.gradle",
+		"/C/Users/Henry/Desktop/comp3301/errs.h",
+		"/C/Users/Henry/Desktop/comp3301/itsh.c",
+		"/H/deco2800-2014/README.md",
+		"/H/Users/Henry/Documents/deco2800-2014/decoworld.protocol/src/main/java/decoworld/protocol/connect/TextMessageRequest.java",
+		"/H/Users/Henry/Documents/deco2800-2014/decoworld.vanilla/README.md",
+		"/H/Users/Henry/Documents/deco2800-2014/decoworld.protocol/src/main/java/decoworld/protocol/connect/ConnectionTextMessage.java",
+		"/H/Developer/comp3301/qshell.c",
+		"/H/Users/Henry/Documents/champs.txt",
+		"/H/Users/Henry/Documents/test.py",
+		"/C/Users/Henry/AppData/Local/Temp/7zODF09.tmp/readline.c",
+		"/L/comp3301/qshell.c",
+		"/H/Users/Henry/Documents/Prolog/aaa3002.pl",
+		"/H/Users/Henry/Documents/Prolog/test2.pl",
+		"/H/Users/Henry/Documents/Prolog/insert.pl",
+		"/C/Users/Henry/AppData/Roaming/Sublime Text 3/Packages/User/C.sublime-build",
+		"/H/Users/Henry/Documents/Prolog/test.c",
+		"/H/Users/Henry/Documents/Prolog/test.pl",
+		"/H/Developer/prolog/ex14.pl",
+		"/H/Games/Steam/SteamLibrary/SteamApps/common/Team Fortress 2/tf/cfg/spam.cfg",
+		"/H/Users/Henry/Downloads/aaa3002.pl",
+		"//DEBIANLAMP/www/infs2233/disclaimer.html",
+		"//DEBIANLAMP/www/infs2233/sell.html",
+		"//DEBIANLAMP/www/infs2233/search.html",
+		"//DEBIANLAMP/www/infs2233/about.html",
+		"//DEBIANLAMP/www/infs2233/offline.html",
+		"//DEBIANLAMP/www/infs2233/css/main.css",
+		"//DEBIANLAMP/www/infs2233/tickets.html",
+		"//DEBIANLAMP/www/infs2233/index.html",
+		"//DEBIANLAMP/www/infs2233/404.html",
+		"//DEBIANLAMP/www/infs2233/disclaimer_2.html",
+		"/H/Developer/infs2233/index.html",
+		"/H/Developer/infs2233/css/main.css",
+		"/H/Developer/java/csse3200/src/PartB/LoansServer.java",
+		"/H/Developer/java/csse3200/src/PartB/CatalogServer.java",
+		"/H/Developer/java/csse3200/src/PartB/QueryClient.java",
+		"/H/Developer/java/csse3200/loans-file.txt",
+		"/H/Developer/java/csse3200/src/PartB/NameServer.java",
+		"/H/Developer/java/coms3200ass2/src/LoansServer.java",
+		"/H/Developer/java/csse3200/src/PartB/NoteToMarker.txt",
+		"/C/cygwin/home/Henry/xando/oldcode.c",
+		"/C/cygwin/home/Henry/xando/Makefile",
+		"/H/happytest/Server.java",
+		"/H/happytest/HappyTest.java",
+		"/C/Users/Henry/AppData/Roaming/Ventrilo/ventrilo2.ini",
+		"/H/Users/Henry/Downloads/warmod.inc",
+		"/H/Users/Henry/Downloads/warmod (1).sp",
+		"/H/happytest/Book.java",
+		"/C/MinGW/msys/1.0/etc/fstab.sample",
+		"/C/cygwin/home/Henry/xando/xando.c",
+		"/C/MinGW/mingw32/lib/gcc/mingw32/4.8.1/libstdc++.dll.a-gdb.py",
+		"/H/happytest/Loan.java",
+		"/C/Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.80/deploy/preferences/shared_ponco.properties",
+		"/C/Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.1.80/deploy/preferences/Ponco.properties",
+		"/C/cygwin/home/Henry/ass3/handler.c",
+		"/C/Users/Henry/Desktop/desktop/thebox.c",
+		"/C/cygwin/home/Henry/ass4/server499.c",
+		"/C/cygwin/home/Henry/ass4/client499.c",
+		"/C/Riot Games/League of Legends/RADS/solutions/lol_game_client_sln/releases/0.0.1.12/deploy/DATA/menu/hud/hud1920x1080.ini",
+		"/C/Riot Games/League of Legends/RADS/solutions/lol_game_client_sln/releases/0.0.1.12/deploy/DATA/cfg/defaults/locale.cfg",
+		"/H/Developer/jediAcademy/code/cgame/cg_main.cpp",
+		"/H/Developer/jediAcademy/code/cgame/cg_credits.cpp",
+		"/H/Developer/jediAcademy/code/0_compiled_first/0_SH_Leak.cpp",
+		"/H/Developer/projects/pygame/striplinenumbers.py",
+		"/H/Program Files/Adobe Audition/Adobe Audition CS5.5/HOSTS SET-UP/hosts",
+		"/H/Users/Henry/Downloads/apronus1392183870.fen",
+		"/H/Users/Henry/Downloads/apronus1392183667.fen",
+		"/H/Users/Henry/Documents/GitHub/boxbox/main.py",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/H/Developer/projects/pygame/main.py",
+		"/H/Users/Henry/Downloads/apronus1392183916.fen",
+		"/C/Riot Games/League of Legends/RADS/solutions/lol_game_client_sln/releases/0.0.1.12/deploy/DATA/menu/hud/chat.ini",
+		"/C/Users/Henry/Desktop/index.html",
+		"/H/Developer/projects/lolstats/main.py",
+		"/C/Riot Games/League of Legends/RADS/system/system.cfg",
+		"/H/Users/Henry/Documents/new.java",
+		"/H/php/php.ini",
+		"/H/php/php.ini-production",
+		"/H/php/php.ini-development",
+		"//debianlamp/www/doug/bookings.html",
+		"//debianlamp/www/doug/rates.html",
+		"//debianlamp/www/doug/index.html",
+		"//debianlamp/www/doug/features.html",
+		"//debianlamp/www/doug/css/main.css",
+		"/C/Users/Henry/Desktop/bootstrap.css",
+		"//debianlamp/www/doug/css/bootstrap.css",
+		"/H/Users/Henry/Downloads/assign2.py",
+		"/H/Developer/blackjack/main.py",
+		"/H/Developer/python/game/main.py",
+		"/C/Users/Henry/AppData/Roaming/Sublime Text 3/Packages/User/py.sublime-build",
+		"/C/Users/Henry/AppData/Roaming/Sublime Text 2/Packages/Python/Python.sublime-build"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alarm_handler",
+			"act",
+			"my_dev.inq",
+			"spacefree",
+			"current",
+			"sort(",
+			"sort",
+			"sort(",
+			"sort",
+			"argc ",
+			"argc: ",
+			"argc:",
+			"0",
+			"pos",
+			"numProcs",
+			"144",
+			"uargv",
+			"args",
+			"uargsv",
+			"uargs",
+			"valid_command",
+			"proc",
+			"usrargsc",
+			"usrargsv",
+			"argsv",
+			"argcp",
+			"args",
+			"cmdsv",
+			"argsc",
+			"argsv",
+			"cmds",
+			"cmdsvc",
+			"process_args",
+			"args",
+			"cmds",
+			"argcp",
+			"args",
+			"numArgs",
+			"free_command",
+			"init_command",
+			"free_process",
+			"init_process",
+			"allocate_arg",
+			"valid_command",
+			"parse_args",
+			"dupefd",
+			"fileIn",
+			"fileOut",
+			"fileout",
+			"fileIn",
+			"fdIn",
+			"filein",
+			"dupefd",
+			"running",
+			"RUNNING",
+			"running",
+			"RUNNING",
+			"running",
+			"RUNNING",
+			"running",
+			"struct Command",
+			"Command",
+			"struct Process",
+			"FileOut",
+			"fileout",
+			"filein",
+			"fdout",
+			"fdin",
+			"/*",
+			"s3",
+			"partAok",
+			"SP",
+			"\" p",
+			"New",
+			"img",
+			"x",
+			"get_map_data",
+			"get",
+			"map",
+			"char**",
+			"sys.stdout.write(",
+			"()\n",
+			"#",
+			"# ",
+			"def",
+			"pygame",
+			".",
+			"body",
+			";",
+			"curl",
+			".hero",
+			".navbar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 133.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "port.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
