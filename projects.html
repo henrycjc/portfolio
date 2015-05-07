@@ -49,21 +49,64 @@
             </div>
             <div id="logo" class="container">
                 <div class="row">
-                    <div class="col-md-8"><h1 id="name">Projects <small>designer + developer</small></h1></div>
+                    <div class="col-md-8"><h1 id="name">Projects <small>my work</small></h1></div>
                     <div class="col-md-4"></div>
                 </div>
             </div>
             <br>
             <br>
-            <br>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8"><p id="sellingmyself">Twenty years old, bringing fertility and fresh ideas to a world of arid design, I am a Brisbane based designer and developer of software, embedded systems and web based applications.</p></div>
+                    <div class="col-md-8"><p></p></div>
                 </div>
-                <br>
-                <br>
+
                 <div class="row">
-                    <div class="col-md-8"><p id="checkthisout">Please explore <a href="projects.html">my work</a> and feel free to <a href="about.html">contact me.</a></p></div>
+                    <div class="col-md-12">
+                    	<div class="tabbable" id="tabsyo" style="display: none;"> <!-- Only required for left/right tabs -->
+                  			<ul class="nav nav-tabs">
+                    			<li class="active"><a href="#tab1" data-toggle="tab" style="font-size: 15pt;">History Chains</a></li>
+			                    <li><a href="#tab2" data-toggle="tab" style="font-size: 15pt;">Major Project Docs</a></li>
+			                    <li><a href="#tab3" data-toggle="tab" style="font-size: 15pt;">Portfolio</a></li>
+			                    <li><a href="#tab4" data-toggle="tab" style="font-size: 15pt;">Online Journal</a></li>
+			                    <li><a href="#tab5" data-toggle="tab" style="font-size: 15pt;">Reflection</a></li>
+			                  </ul>
+                  			<div class="tab-content">
+	                    		<div class="tab-pane active" id="tab1">
+	                        		<br>
+	                        		<p> History Chains is a online social / collaboration network designed to help high school students studying history complete research and act as a study guide. It was designed and developed by myself and four other students at The University of Queensland for DECO1800 "Design Computing Studio 1".</p>
+	                        			<br>
+	                        			<p>
+	                        			You can view history chains online at <a href="http://deco1800-01.uqcloud.net" target="_blank">deco1800-01.zones.net</a> or by cloning yourself a copy via our <a href="https://github.com/henrycjc/historychains" target="_blank">Git repository</a>. 
+	                        		</p>
+	                    		</div> 
+			                    <div class="tab-pane" id="tab2">
+			                        <p style="padding: 20px;">
+			                            You can view a copy of the major project via Blackboard.
+			                            <br>
+			                            <br>
+			                            My contributions included most of the programming related queries including discussing the GitHub page, the document structure and all other related development queries throughout the documents. 
+			                         </p>
+
+			                    </div> <!-- end kitchen -->
+			                    <div class="tab-pane" id="tab3">
+			                        <p style="padding: 20px;">
+			                          You are looking at it! This portfolio was designed using <a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap</a> but, just for Lorna I took extra special care to make sure it <em>didn't look like Bootstrap</em>. <br>
+			                          <br>
+			                          You can clone yourself a copy of this site via my <a href="https://github.com/henrycjc/portfolio" target="_blank">Git repository</a>.
+			                        </p>
+
+			                    </div>
+			                    <div class="tab-pane" id="tab4">
+			                        <p style="padding: 20px">The online reflective journal was a great way for me to let off some steam and also think about <em>why</em> I am actually implementing something the way I was.<br><br>
+			                        You can view it online via <a href="http://henrydeco1800.blogspot.com.au/" target="_blank">Blogspot.</a></p>
+
+			                    </div> 
+			                    <div class="tab-pane" id="tab5">
+			                        <p> Please see my <a href="reflections.html">reflections here</a>.
+			                            </p>
+	                   			 </div> <!-- end misc -->
+                  		</div>
+					</div>
                 </div>
             </div> 
         </div><!-- end wrap -->
@@ -76,9 +119,9 @@
             $(document).ready(function () {
                 $('#logo').fadeIn(2000, function() {
                     $("#logo").removeClass('hidden');
-                    $('#sellingmyself').fadeIn(1500, function() {
+                    $('#tabsyo').fadeIn(1500, function() {
                         $(this).removeClass('hidden');
-                        $("#checkthisout").fadeIn(1000).removeClass('hidden');
+                       
                     })
                 })
             });

@@ -35,11 +35,12 @@
     </head>
     <body>
     <script>
+        /* Anti-spam concatenator */
         function printEmail() {
             var hostname = "henrycjc";
             var dot = ".";
             var com = "com";
-            var user = "henrycjc";
+            var user = "henry";
             var at = "@";
             var to = "<a href=\"mailto:"+ user + at + hostname + dot + com +"\">";
             var toend = "</a>"; 
@@ -60,7 +61,7 @@
             </div>
             <div id="logo" class="container">
                 <div class="row">
-                    <div class="col-md-8"><h1 id="name">Who Am I? <small>All about me</small></h1></div>
+                    <div class="col-md-8"><h1 id="name">Who Am I? <small>all about me</small></h1></div>
                     <div class="col-md-4"></div>
                 </div>
             </div>
@@ -70,35 +71,36 @@
                     <div class="col-md-8"><p id="part1">My name is Henry Cestmir Jerrard Chladil, I am twenty years old and studying Information Technology at The Unversity of Queensland. I work part-time at an online ticketing company, Oztix, as a junior systems administrator.
                     </p>
                     <br>
-                    <p>I also privately own and operate a web design, development and hosting business for small-office-home-office sized businesses looking for a cheap reliable service.</p></div>
+                    <p id="part2">I also privately own and operate a web design, development and hosting business for small-office-home-office sized businesses looking for a cheap reliable service. Artistic influences include Wes Anderson, Stanley Kubrick, Andy Warhol and Kate Jerrard.</p>
+                    <br>
+                    <p id="contact">Please feel free email me via <script> document.write(printEmail()); </script></p>
+                    </div>
                     <div class="col-md-4">
-                            <img src="img/mystuff.png" alt="UQ and Oztix" width="500" height="263"/>
+                        <img id="uqoztix" src="img/mystuff.png" alt="UQ and Oztix" width="400" height="223"/>
                     </div>
+
                 </div>
-                <div class="row">
-                    <div class="col-md-8">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-8"><h2  style="color: white;">Contact</h2>
-                    <p  style="color: white;">Please email me via <script> document.write(printEmail()); </script></p></div>
-                </div>
+     
             </div> 
         </div><!-- end wrap -->
         <nav class="navbar-fixed-bottom center" role="navigation">
             <div class="container" style="width: 600px">
-                <p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil 2014. all rights reserved.</p>
+                <p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil 2014. all rights reserved. <br>"My life is dope and I do dope shit." - Kanye West</p>
             </div>
         </nav> 
         <script>
             $(document).ready(function () {
                 $('#logo').fadeIn(2000, function() {
                     $("#logo").removeClass('hidden');
-                    $('#part2').fadeIn(1500, function() {
+                    $('#part1').fadeIn(1500, function() {
                         $(this).removeClass('hidden');
-                        $("#part2").fadeIn(1000).removeClass('hidden');
+                        $("#uqoztix").fadeIn(1000, function() {
+                            $(this).removeClass('hidden');
+                            $("#part2").fadeIn(1000, function() {
+                                $(this).removeClass('hidden');
+                                $("#contact").fadeIn(1000).removeClass('hidden');
+                            })
+                        })
                     })
                 })
             });

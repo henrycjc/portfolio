@@ -49,21 +49,16 @@
             </div>
             <div id="logo" class="container">
                 <div class="row">
-                    <div class="col-md-8"><h1 id="name">Henry Chladil <small>designer + developer</small></h1></div>
+                    <div class="col-md-8"><h1 id="name">Reflections <small>DECO1800 course</small></h1></div>
                     <div class="col-md-4"></div>
                 </div>
             </div>
             <br>
-            <br>
-            <br>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8"><p id="sellingmyself">Twenty years old, bringing fertility and fresh ideas to a world of arid design, I am a Brisbane based designer and developer of software, embedded systems and web based applications.</p></div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-8"><p id="checkthisout">Please explore <a href="projects.html">my work</a> and feel free to <a href="about.html">contact me.</a></p></div>
+                    <div class="col-md-12" id="aylmao">
+                        <p id="part2">Please see <a href="http://henrydeco1800.blogspot.com.au/" target="_blank">my blog</a> for an account of my activities this course (including reflections) and my <a href="https://github.com/henrycjc/historychains/" target="_blank">GitHub repository</a> for the project's code.</p>
+                    </div>
                 </div>
             </div> 
         </div><!-- end wrap -->
@@ -76,9 +71,9 @@
             $(document).ready(function () {
                 $('#logo').fadeIn(2000, function() {
                     $("#logo").removeClass('hidden');
-                    $('#sellingmyself').fadeIn(1500, function() {
+                    $('#aylmao').fadeIn(1500, function() {
                         $(this).removeClass('hidden');
-                        $("#checkthisout").fadeIn(1000).removeClass('hidden');
+                        $("#part2").fadeIn(1000).removeClass('hidden');
                     })
                 })
             });

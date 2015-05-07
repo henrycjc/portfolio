@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
 				"STDIN",
 				"STDIN_FILENO"
 			],
@@ -76,6 +96,21 @@
 	},
 	"file_history":
 	[
+		"/H/Users/Henry/Documents/portfolio/css/main.css",
+		"/H/Users/Henry/Documents/portfolio/about.html",
+		"/H/xampp/htdocs/historychains/createchain.php",
+		"/H/Users/Henry/Documents/portfolio/reflections.html",
+		"/H/Users/Henry/Documents/portfolio/index.html",
+		"/H/Users/Henry/Documents/portfolio/projects.html",
+		"/H/Games/Steam/SteamLibrary/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/game.cfg",
+		"/H/Games/Steam/SteamLibrary/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/config.cfg",
+		"/H/photoshop/Photoshop.r",
+		"/H/Games/Steam/SteamLibrary/SteamApps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec2.cfg",
+		"/C/Users/Henry/AppData/Roaming/Ventrilo/ventrilo2.ini",
+		"/H/xampp/htdocs/historychains/app/models/Model.class.php",
+		"/H/xampp/htdocs/historychains/addsource.php",
+		"/H/xampp/htdocs/historychains/app/views/View.class.php",
+		"/C/Users/Henry/AppData/Local/Temp/7zE4B84.tmp/faviconit-instructions.txt",
 		"/C/Users/Henry/Desktop/OLD/sorttest/scull.h",
 		"/C/Users/Henry/Desktop/OLD/sorttest/tests.h",
 		"/C/Users/Henry/Desktop/OLD/sorttest/sorttest.c",
@@ -151,7 +186,6 @@
 		"/C/cygwin/home/Henry/xando/Makefile",
 		"/H/happytest/Server.java",
 		"/H/happytest/HappyTest.java",
-		"/C/Users/Henry/AppData/Roaming/Ventrilo/ventrilo2.ini",
 		"/H/Users/Henry/Downloads/warmod.inc",
 		"/H/Users/Henry/Downloads/warmod (1).sp",
 		"/H/happytest/Book.java",
@@ -189,19 +223,11 @@
 		"//debianlamp/www/doug/bookings.html",
 		"//debianlamp/www/doug/rates.html",
 		"//debianlamp/www/doug/index.html",
-		"//debianlamp/www/doug/features.html",
-		"//debianlamp/www/doug/css/main.css",
-		"/C/Users/Henry/Desktop/bootstrap.css",
-		"//debianlamp/www/doug/css/bootstrap.css",
-		"/H/Users/Henry/Downloads/assign2.py",
-		"/H/Developer/blackjack/main.py",
-		"/H/Developer/python/game/main.py",
-		"/C/Users/Henry/AppData/Roaming/Sublime Text 3/Packages/User/py.sublime-build",
-		"/C/Users/Henry/AppData/Roaming/Sublime Text 2/Packages/Python/Python.sublime-build"
+		"//debianlamp/www/doug/features.html"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -215,6 +241,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cl_teamid_",
+			"thirdperson",
+			"\">\n",
+			"428",
 			"alarm_handler",
 			"act",
 			"my_dev.inq",
@@ -331,7 +361,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -371,7 +401,7 @@
 	"project": "port.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
