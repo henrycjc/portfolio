@@ -2,8 +2,10 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"path": "C:\\Users\\Henry\\AppData\\Local\\Temp\\fz3-14357343275180"
 		}
 	]
 }
