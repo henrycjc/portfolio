@@ -35,7 +35,7 @@
     </head>
     <body>
     <script>
-        /* Anti-spam concatenator */
+        /* Anti-spam concatenate-- may not do anything */
         function printEmail() {
             var hostname = "henrycjc";
             var dot = ".";
@@ -67,15 +67,15 @@
             <br>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8"><p id="part1">My name is Henry Chladil, I am twenty years old and studying Information Technology at The Unversity of Queensland. I work part-time at an online ticketing company, Oztix, as a junior systems administrator.
-                    </p>
+                    <div class="col-md-8"><p><span id="part1">Henry Chladil</span><span id="comma">,</span> <span id="binftech">BIT</span></p>
                     <br>
-                    <p id="part2">I also privately own and operate a web design, development and hosting business. My clients range from small one person operations up to medium-large companies.</p>
+                    <p id="part2">I also privately own and operate a web design, development and hosting business. My clients range from small one person operations up to medium-large companies. I graduated a Bachelor of Information Technology (in Software Design) at The University of Queensland in 2016.</p>
                     <br>
-                    <p id="contact">My public resume is available <a href="http://henrycjc.com/Resume.pdf" target="_blank">here</a>. Please feel free email me via <script> document.write(printEmail()); </script></p>
+                    <p id="contact">My public resume is available <a href="http://henrycjc.com/Henry_Chladil_Resume.pdf" target="_blank">here</a>. Please feel free to email me via <script> document.write(printEmail()); </script></p>
                     </div>
                     <div class="col-md-4">
-                        <img id="uqoztix" src="img/mystuff.png" alt="UQ and Oztix" width="400" height="223"/>
+                        <img id="me" src="img/me.jpg" alt="Me, Henry" height="400"/>
+                        <!-- <img id="uqoztix" src="img/mystuff.png" alt="UQ and Oztix" width="400" height="223"/> -->
                     </div>
 
                 </div>
@@ -84,7 +84,7 @@
         </div><!-- end wrap -->
         <nav class="navbar-fixed-bottom center" role="navigation">
             <div class="container" style="width: 600px">
-                <p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil 2015. all rights reserved.</p>
+                <p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil <script>document.write(new Date().getFullYear());</script>. all rights reserved.</p>
             </div>
         </nav> 
         <script>
@@ -93,15 +93,21 @@
                     $("#logo").removeClass('hidden');
                     $('#part1').fadeIn(1500, function() {
                         $(this).removeClass('hidden');
-                        $("#uqoztix").fadeIn(1000, function() {
+                        $('#comma').fadeIn('fast', function() {
                             $(this).removeClass('hidden');
-                            $("#part2").fadeIn(1000, function() {
+                            $('#binftech').fadeIn('fast', function() {
                                 $(this).removeClass('hidden');
-                                $("#contact").fadeIn(1000).removeClass('hidden');
-                            })
-                        })
-                    })
-                })
+                                $("#me").fadeIn(1000, function() {
+                                    $(this).removeClass('hidden');
+                                    $("#part2").fadeIn(1000, function() {
+                                        $(this).removeClass('hidden');
+                                        $("#contact").fadeIn(1000).removeClass('hidden');
+                                    }) //part2
+                                }) // me
+                            }) // binftech
+                        }) // ,
+                    }) // part1
+                }) // logo
             });
         </script>
 

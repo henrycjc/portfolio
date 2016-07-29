@@ -35,7 +35,6 @@
 		<meta name="msapplication-config" content="/browserconfig.xml">
 	</head>
 	<body>
-
 		<div class="wrap">
 			<nav class="navbar" role="navigation">
 				<div class="container">
@@ -63,122 +62,83 @@
 					<div class="col-md-12">
 						<div class="tabbable" id="tabsyo" style="display: none;"> <!-- Only required for left/right tabs -->
 							<ul class="nav nav-tabs">
-								<li class="active"><a href="#tab1" data-toggle="tab" style="font-size: 15pt;">Easitag</a></li>
-								<li><a href="#tab2" data-toggle="tab" style="font-size: 15pt;">History Chains</a></li>
-								<li><a href="#tab3" data-toggle="tab" style="font-size: 15pt;">Orchid Gums</a></li>
-								<li><a href="#tab4" data-toggle="tab" style="font-size: 15pt;">DecoWorld</a></li>
-								<li><a href="#tab5" data-toggle="tab" style="font-size: 15pt;">Misc.</a></li>
+								<li class="active"><a href="#tab1" data-toggle="tab" style="font-size: 15pt;">NFC HSE</a></li>
+								<li><a href="#tab2" data-toggle="tab" style="font-size: 15pt;">Easiwayv NFC Tools</a></li>
+								<li><a href="#tab3" data-toggle="tab" style="font-size: 15pt;">WaterWatcher</a></li>
+								<li><a href="#tab4" data-toggle="tab" style="font-size: 15pt;">Experimentary</a></li>
 							  </ul>
-							<div class="tab-content" style="background: rgba(255, 255, 255, 0.7);">
+
+							<div class="tab-content" style="background: rgba(255, 255, 255, 0.8);">
 								<div class="tab-pane active tabyo" id="tab1">
-								<br>
+								    <br>
+									<h2>Near Field Communication High Speed Encoder</h2>
 									<p class="portfolio">
-										<a href="http://easitag.com.au" target="_blank">
-											Easitag Pty Ltd</a> commissioned a mobile application for encoding <a href="https://en.wikipedia.org/wiki/Near_field_communication" target="_blank">NFC</a> data to NFC enabled media: Easiwayv NFC (available on the <a href="https://play.google.com/store/apps/details?id=com.easitag.easiwayvnfc" target="_blank">Google Play store</a>). I am also currently designing and developing a large scale propriety product for Easitag.
+										<a href="http://easitag.com.au" target="_blank">Easitag Pty Ltd</a> commissioned a machine to replace the manual process of counting and encoding large amounts of NFC tags using their Tools app (see Easiwayv NFC Tools tab). My vision was essentially a reel-to-reel lying flat, with an NFC antenna in between the two rolls. Two motors, and a number of potentiometers operating in a feedback loop provide the necessary "rolling" and tensioning of the rolls of tags. A Flask web app serves as the controls interface: users create "jobs" which are handled by routes which create entries in a shared SQLite database on the SD card of the Raspberry Pi. Once a user has created a job, there is a hardware barrier stopping the user from starting the machine remotely: a physical button must be pressed to start the machine. This button press fetches the newest job or pauses as necessary. Once a job has been completed, the user is notified via email and the machine resets to a state ready for the next job. <br>
+                                        <br>
+                                        The most challenging aspect of the project was dealing with the limiting hardware and meeting changing requirements as the physical components were completed. 
+                                        The Raspberry Pi experienced intermittent voltage drops caused by the USB and Ethernet subsystems drawing too much power. This severely impacted performance at times which was very difficult to debug and I will take considerably greater care in the future to ensure my hardware is not the source of presumed complex software problems. 
+                                        <br><br>
+                                        While Flask is an extremely powerful and lightweight framework, its performance and reliability plummets when run as part of a multi-threaded program. Simple HTTP requests were taking as long as 5 seconds to complete (on a Gigabit LAN), an unfortunate shortcoming of the technology. All hardware code was moved to a separate program and an additional issue related to the Raspberry Pi's hardware API's (GPIO) threading was discovered. Threading was swapped out for multiprocessing as the overhead from the process spawning was insignificant compared to the gains from eliminating the GPIO software interrupt performance decrease. 
+                                        <br><br>
+                                        A second is an eternity for a modern computer program but these were the speeds being experienced by the synchronous database bindings for Python. This caused many issues such as tags being fed through the NFC antenna without being counted or encoded onto. I dabbled with using a RAM database (to eliminate write time overhead) but found the memory sharing was too intricate and not viable (given it was not supported by SQLite) -- I tried a system of asynchronous batch exporting data from the memory database to a shared on disk database but again found the lack of data integrity and race conditions outweighed the benefits. I decided to attack from a different angle, as the above techniques were also revealing other integrity issues. The stepper motors were retuned to work with more "torque" but with a considerably shorter movement cycle. The motors now await a signal from the encoding process as to whether the current tag has successfully been connected to and written to. Without this signal, their movement cycle does not continue -- the downside is that jobs now take up to 0.1s per tag longer but ensuring every single tag (in a roll of over 2000) is accounted for was worth it. 
 									</p>
-									<h2>Technologies</h2>
-									<p class="portfolio">
-										Ionic Framework / AngularJS / Apache Cordova: I love using theses frameworks and technologies. Ionic is incredibly flexible and enables fast prototyping for scrum like methodologies. It helped me deliver on crucial client requirement to have the product easily ported to multiple platforms when new technology becomes available on them. AngularJS is an ingenious framework which was a pleasure to learn and make use of for the Easiwayv project.
-									</p>
-									<h2>Examples</h2>
-									<p class="portfolio">
-										The codebase is closed source, but I can provide code samples upon request.
-									</p>
+                                    <img src="img/machine.jpg" width="400">
+                                    <img src="img/machineinterface.png" width="400">
 									<h2>Links</h2>
 									<p class="portfolio">
-										<span class="ion-social-android"></span> <a href="https://play.google.com/store/apps/details?id=com.easitag.easiwayvnfc" target="_blank">easiwayv NFC - Android Apps on Google Play</a>
-										<br>
-										<span class="ion-android-globe"></span> <a href="http://easitag.com.au" target="_blank">Easitag Pty Ltd</a>
+                                        <span class="ion-android-globe"></span> <a href="http://easitag.com.au" target="_blank">Easitag Pty Ltd</a> <br>
+                                        <span class="ion-android-globe"></span> <a href="https://www.python.org/" target="_blank">Python Homepage</a> <br>
+                                        <span class="ion-android-globe"></span> <a href="http://flask.pocoo.org/" target="_blank">Flask: web development, one drop at a time</a> <br>
+                                        <span class="ion-android-globe"></span> <a href="https://en.wikipedia.org/wiki/Raspberry_Pi" target="_blank">Raspberry Pi - Wikipedia, the free encyclopedia</a> <br>
 									</p>
 								</div> 
 
-
 								<div class="tab-pane tabyo" id="tab2">
-								<br>
+								    <br>
+                                    <h2>Easiwayv NFC Tools</h2>
 									<p class="portfolio">
-										<a href="https://github.com/henrycjc/historychains" target="_blank">History Chains</a> is an academic research based social network of sorts, developed by three undergraduate students at The University of Queensland. It is targeted towards younger students, 14 to 18 years old studying Modern Australian History and other related subjects. History Chains makes extensive use of the <a href="http://help.nla.gov.au/trove/building-with-trove/api" target="_blank">Trove API</a>, an initiative by the National Library of Australia to catalogue Australia's history digitally.
-									</p>
-									<h2>Technologies</h2>
-									<p class="portfolio">
-										PHP: My 'goto' programming language. I have been using since 2010 and I know it very well so this project was more about applying my existing skills rather than learning new ones. However, it did help to learn more about AJAX.<br>
-										MySQL: DBMS of choice - I like its simplicity and number of features. Complete implementation of SQL standard is not necessary here. 
-									</p>
-									<h2>Examples</h2>
-									<p class="portfolio">
-										The codebase is available on GitHub <a href="https://github.com/henrycjc/historychains" target="_blank">here</a>. The core logic of the application can be found here: <pre style="display: inline;">/app/models/Model.class.php</pre> 
+										Easiwayv, Easitag's NFC brand, required an app for clients/customers to use with their Easiwayv NFC tags (and to also market the technology). I developed a rudimentary reader/writer app using Cordova and the Ionic Framework. Ultimately, the technology proved too primitive to add future required features - also performance was noticeable on older devices. <br>
+                                        <br>
+                                        The second version of the app I wrote using Android's official API - while recreating functionality from the old app was very simple and straight forward, it appears that there is still relatively poor support for NFC in general and there are few up-to-date resources available. Indeed, it was very difficult to add more features such as Business Card records given there are no "tutorials" available, I had to find the RFC and adhere as necessary (however in retrospect, this was a cakewalk compared to WiFi records). "WiFi Connection Handover" records contain information necessary to connect to a WiFi network -- when tags with the record are tapped, your WiFi settings are decoded and your phone attempts to connect to the network. However, as of Android 5.0.0 you can long tap on a WiFi connection and write that connection to a tag ("Write to NFC tag") and Google appears to encourage this method only as there is no API to achieve similar functionality. <a href="http://stackoverflow.com/questions/36758225/creating-an-ndef-wifi-record-using-application-vnd-wfa-wsc-in-android" target="_blank">A very thorough investigation (by me) of the Android source code</a> yielded no results. 
+                                        <br><br>
+                                        My solution? Using a copy of the WiFi Alliance "Wi-Fi Simple Configuration Technical Specification Version 2.0.5" I was able to replicate the functionality. By manipulating a very large number of <code>char[]</code> arrays, I had to manually set each byte in the 150b payload for the NFC WiFi Handover. While an incredibly tedious process, it was a valuable lesson in adhering to a concrete specification (and a great ASCII refresher).  <br><br>
+
+                                        A client requirement mandated that the app supported older versions of Android, the consequence being I was restricted to a fairly old version of the Android API and many "helper" methods were unavailable. Further, many custom data types/record types were required but there was no support for such tasks and I was required to write replacement helper methods for many different record types (which I plan on open sourcing soon). <br><br>
+                                        
 									</p>
 									<h2>Links</h2>
 									<p class="portfolio">
-										<span class="ion-social-github"></span> <a href="https://github.com/henrycjc/historychains" target="_blank">henrycjc/historychains - GitHub</a>
-										<br>
-										<span class="ion-android-globe"></span> <a href="http://deco1800-01.uqcloud.net/" target="_blank">UQ Zone - History Chains</a>
+										<span class="ion-social-android"></span> <a href="https://play.google.com/store/apps/details?id=com.easitag.easiwayvnfc" target="_blank">Easiwayv NFC Tools - Android Apps on Google Play</a>
+                                        <br>
+                                        <span class="ion-android-globe"></span> <a href="http://easitag.com.au" target="_blank">Easitag Pty Ltd</a>
 									</p>
 								</div>
+                                <div class="tab-pane tabyo" id="tab3">
+                                    <br>
+                                    <h2>WaterWatcher</h2>
+                                    <p class="portfolio">
+                                        WaterWatcher is a web-based environmental research tool for the gathering, storage, management and representation of data collected by buoys which have been deployed to various waterways throughout South-East Queensland. The buoys are extremely low powered and can last up to a year in the field, allowing them to autonomously send their reading data to the WaterWatcher server (via a 3G connection) without a researcher attending to them. The system has also shown to have a greater potential for the collection of data outside the scope of water quality and waterway research. Lastly, the system includes a mobile application for field workers to quickly and easily identify a successfully deployed buoy immediately.<br><br>
+                                        In the past, water quality researchers who have needed access to water quality data were confined to a manual and inefficient process of travelling out to the field and taking readings with manual tools such as Secchi disks. This method of gathering data was impractical and not scalable as it is very time consuming and relatively inaccurate in comparison to digital sensors. However, it is a very necessary process as the data is typically very valuable to researchers who may use it for models directly influencing governmental policy with respect to the environment. Another concern is that during a flood event it is extremely dangerous for a researcher to be taking measurements in rough currents with water-borne detritus (when the data is most important).<br><br>
 
+                                        Working in a 6 person team, my role was product manager and lead developer of a buoy simulator used for various types of testing for both developers and scientists. It was an incredibly satisfying and challenging project that taught me many things about management and myself. For more information about this project, please contact me privately.
+                                    </p>
+                                </div>
 
-								<div class="tab-pane tabyo" id="tab3">
-								<br>
-									<p class="portfolio">
-										<a href="http://www.orchidgums.com.au" target="_blank">Orchid Gums</a> is a simple static website for a Frasier Island getaway.
-									</p>
-									<h2>Technologies</h2>
-									<p class="portfolio">
-										HTML/CSS: A rapidly designed and developed website for a client with very simple requirements for a static website. <br>
-										Twitter Bootstrap: My goto templating framework for websites such as this.
-									</p>
-									<h2>Examples</h2>
-									<p class="portfolio">
-										Code examples available upon request. 
-									</p>
-									<h2>Links</h2>
-									<p class="portfolio">
-										<span class="ion-android-globe"></span> <a href="http://orchidgums.com.au/" target="_blank">Orchid Gums</a>
-									</p>
+                                <div class="tab-pane tabyo" id="tab4">
+                                    <br>
+                                    <h2>Experimentary</h2>
+                                    <p class="portfolio">
+                                        Experimentary is a whole new way of doing (and teaching) science. Experiments are introduced and explained by Dr Rob in short entertaining videos. Students then form their groups and go about conducting the experiments as explained, all the while recoding their predictions and findings in Experimentary's online lab book. Once finished, group or class results can be presented, compared and discussed. The experiments available will span all areas of science and can be selected by year level, duration, resources required or curriculum. And speaking of curriculum, there's plenty of engineering technology and mathematics in here as well. STEM hungry kids can finally get their fill, all in the one place.<br><br>
+
+                                        I developed the prototype in tandem and am currently working on a back-end API to support a considerably more powerful and feature rich version of the platform. I cannot go into more detail publicly.
+                                    </p>
+                                    <h2>Links</h2>
+                                    <p class="portfolio">
+                                        <span class="ion-android-globe"></span> <a href="http://experimentary.com.au/" target="_blank">Dr Rob's Experimentary</a>
+                                    </p>
+                                </div>
+
 								</div>
-
-								<div class="tab-pane tabyo" id="tab4">
-								<br>
-									<p class="portfolio">
-										DecoWorld was a game developed by myself and 200 other students for a second year design computing course at <a href="about.html">my university</a>.
-									</p>
-									<h2>Technologies</h2>
-									<p class="portfolio">
-										Java: I find Java personally challenging but for large scale projects such as this the language's design shines very bright. Technically, it is not my strong suit however the problem solving aspect of the project became the greater challenge and Java's tools merely provided an outlet for solutions.<br>
-										LibGDX: Feature full and very powerful graphics library. It was great to get some experience using a game-centric library even though it wasn't something like Unity or Unreal Engine.<br>
-										Git: Git was a major part of this project as there ended up being 8000+ commits over 13 weeks, conflict resolution became a major aspect of the project's success.
-									</p>
-									<h2>Examples</h2>
-									<p class="portfolio">
-										Take a look at my portfolio for the course <a href="http://henrycjc.com/DecoWorldPortfolio.pdf" target="_blank">here</a>.
-									</p>
-									<h2>Links</h2>
-									<p class="portfolio">
-										<span class="ion-social-github"></span> <a href="https://github.com/UQdeco2800/deco2800-2014" target="_blank">UQdeco2800/deco2800-2014 - GitHub (requires UQ account)</a>
-										<br>
-										<span class="ion-android-globe"></span> <a href="http://henrycjc.com/DecoWorldPortfolio.pdf" target="_blank">DecoWorld Portfolio</a>
-									</p>
-								</div>
-
-
-								<div class="tab-pane tabyo" id="tab5">
-								<br>
-									<p class="portfolio">
-										I have contributed to a number repositories on GitHub. My most significant contribution has been my additions to an NFC Reader application where I added functionality for Writing as well.
-									</p>
-									<h2>Technologies</h2>
-									<p class="portfolio">
-										Ionic Framework / Apache Cordova
-									</p>
-									<h2>Examples</h2>
-									<p class="portfolio">
-										Check out the Git repository <a href="https://github.com/henrycjc/ionic-nfc-reader-writer" target="_blank">here</a>. Major logic can be found here: <pre style="display: inline;">/www/js</pre>
-									</p>
-									<h2>Links</h2>
-									<p class="portfolio">
-										<span class="ion-social-github"></span> <a href="https://github.com/henrycjc/ionic-nfc-reader-writer" target="_blank">henrycjc/ionic-nfc-reader-writer - GitHub</a>
-									</p>
-								</div>
-
 						</div>
 					</div>
 				</div>
@@ -186,7 +146,8 @@
 		</div><!-- end wrap -->
 		<nav class="navbar-fixed-bottom center" role="navigation">
 			<div class="container" style="width: 600px">
-				<p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil 2015. all rights reserved.</p>
+                <br>
+				<p style="color: #fff; font-size: 16pt;">copyright &copy; henry c j chladil <script>document.write(new Date().getFullYear());</script>. all rights reserved.</p>
 			</div>
 		</nav>
 		<script>
